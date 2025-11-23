@@ -106,7 +106,7 @@ function Tracker1() {
         <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Habit Tracker
+              Task Manager
             </h1>
             <p className="text-sm opacity-80">
               {date.toLocaleDateString("en-GB", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} • 
@@ -170,7 +170,7 @@ function Tracker1() {
             {/* Habit List */}
             <div className={`rounded-xl shadow-lg overflow-hidden ${darkMode ? "bg-gray-800" : "bg-white"}`}>
               <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-                <h3 className="text-lg font-semibold">Your Habits</h3>
+                <h3 className="text-lg font-semibold">Your Task</h3>
               </div>
               
               {habitList.length === 0 ? (
@@ -178,8 +178,8 @@ function Tracker1() {
                   <div className="mx-auto w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-4">
                     <FiPlus className="text-blue-600 dark:text-blue-300 text-2xl" />
                   </div>
-                  <h4 className="text-lg font-medium mb-1">No habits yet</h4>
-                  <p className="text-gray-500 dark:text-gray-400">Add your first habit to get started!</p>
+                  <h4 className="text-lg font-medium mb-1">No task yet</h4>
+                  <p className="text-gray-500 dark:text-gray-400">Add your first Task to get started!</p>
                 </div>
               ) : (
                 <ul className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -300,14 +300,14 @@ function Tracker1() {
                   <div className="mx-auto w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center mb-2">
                     <FiX className="text-gray-400 text-xl" />
                   </div>
-                  <p className="text-gray-500 dark:text-gray-400">No habits completed yet</p>
+                  <p className="text-gray-500 dark:text-gray-400">No task completed yet</p>
                 </div>
               )}
             </div>
 
             {/* Pending Habits */}
             <div className={`p-6 rounded-xl shadow-lg ${darkMode ? "bg-gray-800" : "bg-white"}`}>
-              <h3 className="text-lg font-semibold mb-4">Pending Habits</h3>
+              <h3 className="text-lg font-semibold mb-4">Pending Task</h3>
               
               {(totalCount - completedCount) > 0 ? (
                 <ul className="space-y-3">
@@ -324,7 +324,7 @@ function Tracker1() {
                     <FiCheck className="text-green-500 dark:text-green-400 text-xl" />
                   </div>
                   <p className="text-gray-500 dark:text-gray-400">All caught up!</p>
-                  <p className="text-sm text-gray-400 dark:text-gray-500 mt-1">Great job completing all your habits</p>
+                  <p className="text-sm text-gray-400 dark:text-gray-500 mt-1">Great job completing all your Task</p>
                 </div>
               )}
             </div>
